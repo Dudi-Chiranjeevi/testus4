@@ -10,7 +10,7 @@ pipeline {
  
         string(name: 'DEST_PATH', defaultValue: '/home/cdudi/', description: 'Target path on remote hosts')
  
-        string(name: 'FILE_NAME', defaultValue: 'data4.csv', description: 'CSV file to transfer')
+        string(name: 'FILE_NAME', defaultValue: 'data5.csv', description: 'CSV file to transfer')
  
     }
  
