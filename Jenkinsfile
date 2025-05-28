@@ -98,7 +98,7 @@ pipeline {
  
         string(name: 'DEST_USER', defaultValue: 'cdudi', description: 'Destination username')
  
-        string(name: 'DEST_HOST', defaultValue: 'ALL', description: 'Target host IP or "ALL" for all')
+        choice(name: 'DEST_HOST', choices: ['ALL', '192.168.1.101', '192.168.1.102'], description: 'Target host IP or "ALL" for all')
  
         string(name: 'DEST_PATH', defaultValue: '/home/cdudi/', description: 'Target path on remote host(s)')
  
@@ -108,7 +108,7 @@ pipeline {
  
     environment {
         LOG_FILE = 'logs/transfer.log'
-        ALL_HOSTS = '10.128.0.24,10.128.0.28'
+        // ALL_HOSTS = '10.128.0.24,10.128.0.28'
     }
  
     stages {
